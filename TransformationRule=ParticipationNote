@@ -1,4 +1,6 @@
-IF Condition="IsNotNullOrEmpty"([StrikePrice])"
+IF Condition="IsNotNullOrEmpty([StrikePrice])"
 	IF Condition="IsNotNullOrEmpty([WarrantUnderlyingAsset])"
 		IF Condition="LesserThan([StrikePrice]),1"
 			Set FieldName="PlaceHolder1" Value="Concat(CallMethod(SplitString, [WarrantUnderlyingAsset], ., 1))"
+			IF Condition="IsEquals([PlaceHolder1], SZ)"
+				Set FieldName="ParticipationNotes" Value="Concat(Y)"
