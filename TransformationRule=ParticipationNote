@@ -1,1 +1,1 @@
-IF Condition="IsNotNullOrEmpty"([StrikePrice1])"
+IF Condition="IsNotNullOrEmpty"([StrikePrice])"
