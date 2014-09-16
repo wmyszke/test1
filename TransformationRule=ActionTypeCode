@@ -1,0 +1,2 @@
+IF Condition="IsEquals([OperationCode], 2)"
+	Set Fieldname="ActionTypeCode" Value="Concat(ADD)"
